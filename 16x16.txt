@@ -1,0 +1,38 @@
+//First digging up
+init_dig()
+	for j = 1,6 do
+  		turtle.digUp()
+  		turtle.up()
+	end
+end
+
+digginDown()
+	turtle.dig()
+	turtle.forward()
+	for j = 1,6 do
+  		turtle.digDown()
+  		turtle.Down()
+	end
+end
+
+digginUp()
+	turtle.dig()
+	turtle.forward()
+	for j = 1,6 do
+  		turtle.digUp()
+  		turtle.up()
+	end
+end
+
+function init_deep()
+  init_dig()
+  digginDown()
+
+  for i = 1,7 do
+  	digginUp()
+  	digginDown()
+  end
+
+end
+
+init_deep()
